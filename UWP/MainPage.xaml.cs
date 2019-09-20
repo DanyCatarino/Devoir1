@@ -33,7 +33,11 @@ namespace UWP
 
         private async void CmdValider_Click(object sender, RoutedEventArgs e)
         {
-            // A vous de jouer :)
+            // A vous de jouer :
+            //Remplissage des cboBox
+            //cboCategories.Text = Condition.CalculerMontantMax(uneCategorie);
+
+            //Verif de saisi
             if (txtPrix.Text == "")
             {
                 var dialog = new MessageDialog("Veuillez saisir le prix");
@@ -41,7 +45,16 @@ namespace UWP
             }
             else
             {
+                bool membre = false;
                 if(rbOui.IsChecked == true)
+                {
+                    membre = true;
+                }
+                else
+                {
+                    membre = false;
+                }
+                lblRemboursement.Text = Condition.CalculerMontantRembourse(Convert.ToInt32(lblNbJours.Text), cboCategories.Text, membre, cboEtats.Text, Convert.ToInt32(txtPrix)).ToString();
             }
         }
 
@@ -62,5 +75,6 @@ namespace UWP
             lesEtats.Add("Abimé"); lesEtats.Add("Très abimé"); lesEtats.Add("Bon"); lesEtats.Add("Très bon");
             cboEtats.ItemsSource = lesEtats;
         }
+
     }
 }

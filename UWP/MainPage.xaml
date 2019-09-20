@@ -93,7 +93,7 @@
             <TextBlock Name="lblRemboursement" Text=""
                FontSize="40" FontFamily="Monotype Corsiva"
                HorizontalAlignment="Center" HorizontalTextAlignment="Center"
-                       VerticalAlignment="Center" Height="84" Width="340">
+                       VerticalAlignment="Center" Height="84" Width="340" SelectionChanged="LblRemboursement_SelectionChanged">
             </TextBlock>
         </Grid>
     </Grid>
