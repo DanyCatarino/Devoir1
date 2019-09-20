@@ -52,6 +52,7 @@ namespace ModelObjet
             }
 
         }
+
         //Permet de renvoyer la réduction si on est membre ou pas
         public static double CalculerReductionMembre(bool estMembre)
         {
@@ -64,6 +65,7 @@ namespace ModelObjet
                 return 0.2;
             }
         }
+
         //Permet de renvoyer la réduction en fonction de l'état de l'achat
         public static double CalculerReduction(string unEtat)
         {
